@@ -41,11 +41,11 @@ if ($message->{"text"} == 'kakunin') {
               ]
           ] 
      ]; 
-} elseif ($message->{"text"} == 'カルーセル') {
+} elseif ($message->{"text"} == 'ca') {
      // カルーセルタイプ 
     $messageData = [ 
         'type' => 'template', 
-        'altText' => 'ca', 
+        'altText' => 'カルーセル', 
         'template' => [
              'type' => 'carousel', 
             'columns' => [ 

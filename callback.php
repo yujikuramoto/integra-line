@@ -5,78 +5,78 @@ $jsonObj = json_decode($jsonString); $message = $jsonObj->{"events"}[0]->{"messa
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 
- // ‘—‚ç‚ê‚Ä‚«‚½ƒƒbƒZ[ƒW‚Ì’†g‚©‚çƒŒƒXƒ|ƒ“ƒX‚Ìƒ^ƒCƒv‚ğ‘I‘ğ 
-if ($message->{"text"} == 'Šm”F') {
-     // Šm”Fƒ_ƒCƒAƒƒOƒ^ƒCƒv 
+ // é€ã‚‰ã‚Œã¦ããŸãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã®ä¸­èº«ã‹ã‚‰ãƒ¬ã‚¹ãƒãƒ³ã‚¹ã®ã‚¿ã‚¤ãƒ—ã‚’é¸æŠ 
+if ($message->{"text"} == 'kakunin') {
+     // ç¢ºèªãƒ€ã‚¤ã‚¢ãƒ­ã‚°ã‚¿ã‚¤ãƒ— 
     $messageData = [ 
         'type' => 'template', 
-        'altText' => 'Šm”Fƒ_ƒCƒAƒƒO', 
-        'template' => [ 'type' => 'confirm', 'text' => 'Œ³‹C‚Å‚·‚©[H', 
+        'altText' => 'ç¢ºèªãƒ€ã‚¤ã‚¢ãƒ­ã‚°', 
+        'template' => [ 'type' => 'confirm', 'text' => 'å…ƒæ°—ã§ã™ã‹ãƒ¼ï¼Ÿ', 
             'actions' => [
-                [ 'type' => 'message', 'label' => 'Œ³‹C‚Å‚·', 'text' => 'Œ³‹C‚Å‚·' ],
-                [ 'type' => 'message', 'label' => '‚Ü‚ ‚Ü‚ ‚Å‚·', 'text' => '‚Ü‚ ‚Ü‚ ‚Å‚·' ], 
+                [ 'type' => 'message', 'label' => 'å…ƒæ°—ã§ã™', 'text' => 'å…ƒæ°—ã§ã™' ],
+                [ 'type' => 'message', 'label' => 'ã¾ã‚ã¾ã‚ã§ã™', 'text' => 'ã¾ã‚ã¾ã‚ã§ã™' ], 
             ] 
         ]
  ]; 
-} elseif ($message->{"text"} == 'ƒ{ƒ^ƒ“') { 
-    // ƒ{ƒ^ƒ“ƒ^ƒCƒv 
+} elseif ($message->{"text"} == 'ãƒœã‚¿ãƒ³') { 
+    // ãƒœã‚¿ãƒ³ã‚¿ã‚¤ãƒ— 
     $messageData = [ 
         'type' => 'template',
-         'altText' => 'ƒ{ƒ^ƒ“', 
+         'altText' => 'ãƒœã‚¿ãƒ³', 
         'template' => [
              'type' => 'buttons',
-             'title' => 'ƒ^ƒCƒgƒ‹‚Å‚·',
-             'text' => '‘I‘ğ‚µ‚Ä‚Ë', 
+             'title' => 'ã‚¿ã‚¤ãƒˆãƒ«ã§ã™',
+             'text' => 'é¸æŠã—ã¦ã­', 
             'actions' => [
                  [ 
                     'type' => 'postback', 
-                    'label' => 'webhook‚Épost‘—M', 
+                    'label' => 'webhookã«posté€ä¿¡', 
                     'data' => 'value' 
                 ],
                  [
                      'type' => 'uri',
-                     'label' => 'google‚ÖˆÚ“®', 
+                     'label' => 'googleã¸ç§»å‹•', 
                      'uri' => 'https://google.com' 
                  ]
               ]
           ] 
      ]; 
-} elseif ($message->{"text"} == 'ƒJƒ‹[ƒZƒ‹') {
-     // ƒJƒ‹[ƒZƒ‹ƒ^ƒCƒv 
+} elseif ($message->{"text"} == 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«') {
+     // ã‚«ãƒ«ãƒ¼ã‚»ãƒ«ã‚¿ã‚¤ãƒ— 
     $messageData = [ 
         'type' => 'template', 
-        'altText' => 'ƒJƒ‹[ƒZƒ‹', 
+        'altText' => 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«', 
         'template' => [
              'type' => 'carousel', 
             'columns' => [ 
                 [ 
-                    'title' => 'ƒJƒ‹[ƒZƒ‹1', 
-                    'text' => 'ƒJƒ‹[ƒZƒ‹1‚Å‚·',
+                    'title' => 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«1', 
+                    'text' => 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«1ã§ã™',
                      'actions' => [
                          [
                             'type' => 'postback',
-                             'label' => 'webhook‚Épost‘—M',
+                             'label' => 'webhookã«posté€ä¿¡',
                              'data' => 'value'
                          ],
                          [ 
                             'type' => 'uri', 
-                            'label' => '”ü—e‚ÌŒûƒRƒ~Lê‚ğŒ©‚é',
+                            'label' => 'ç¾å®¹ã®å£ã‚³ãƒŸåºƒå ´ã‚’è¦‹ã‚‹',
                              'uri' => 'https://report.clinic/'
                          ] 
                     ] 
                 ],
                  [ 
-                        'title' => 'ƒJƒ‹[ƒZƒ‹2', 
-                        'text' => 'ƒJƒ‹[ƒZƒ‹2‚Å‚·', 
+                        'title' => 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«2', 
+                        'text' => 'ã‚«ãƒ«ãƒ¼ã‚»ãƒ«2ã§ã™', 
                         'actions' => [ 
                             [
                                 'type' => 'postback', 
-                                'label' => 'webhook‚Épost‘—M', 
+                                'label' => 'webhookã«posté€ä¿¡', 
                                 'data' => 'value' 
                             ], 
                             [ 
                                 'type' => 'uri', 
-                                'label' => '—”ü‰ï‚ğŒ©‚é', 
+                                'label' => 'å¥³ç¾ä¼šã‚’è¦‹ã‚‹', 
                                 'uri' => 'https://jobikai.com/' 
                             ] 
                         ] 
@@ -85,7 +85,7 @@ if ($message->{"text"} == 'Šm”F') {
             ] 
     ];
  } else {
-     // ‚»‚êˆÈŠO‚Í‘—‚ç‚ê‚Ä‚«‚½ƒeƒLƒXƒg‚ğƒIƒEƒ€•Ô‚µ
+     // ãã‚Œä»¥å¤–ã¯é€ã‚‰ã‚Œã¦ããŸãƒ†ã‚­ã‚¹ãƒˆã‚’ã‚ªã‚¦ãƒ è¿”ã—
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
 } 
 $response = [ 'replyToken' => $replyToken, 'messages' => [$messageData] ]; 

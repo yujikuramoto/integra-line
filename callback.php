@@ -45,7 +45,7 @@ if ($message->{"text"} == 'kakunin') {
      // カルーセルタイプ 
     $messageData = [ 
         'type' => 'template', 
-        'altText' => 'カルーセル', 
+        'altText' => 'ca', 
         'template' => [
              'type' => 'carousel', 
             'columns' => [ 

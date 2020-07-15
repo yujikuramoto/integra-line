@@ -8,53 +8,53 @@ $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 
 $endMsg = 0;
 
-if ($message->{"text"} == '安否確認'){
+// if ($message->{"text"} == '安否確認'){
 
-    $messageData = [ 
-        'type' => 'template', 
-        'altText' => '安否確認', 
-        'template' => [ 'type' => 'buttons', 
-            'thumbnailImageUrl' => 'https://liginc.co.jp/wp-content/uploads/2020/05/ec_200507_01_h-1310x874.jpg', 
-            'imageAspectRatio' => 'rectangle', 
-            'imageSize' => 'cover',          
-            'imageBackgroundColor' => '#FFFFFF',          
-            'text' => '現在状況を教えて下さい。', 
-            'defaultAction' => [
-                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
-            ] ,
-            'actions' => [
-                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
-                [ 'type' => 'message', 'label' => '怪我がありますが、対応できます', 'text' => '回答1:2' ], 
-                [ 'type' => 'message', 'label' => 'レスキューが必要です', 'text' => '回答1:3' ], 
-            ] 
-        ]
- ];
- endMsg = 1;
-}
+//     $messageData = [ 
+//         'type' => 'template', 
+//         'altText' => '安否確認', 
+//         'template' => [ 'type' => 'buttons', 
+//             'thumbnailImageUrl' => 'https://liginc.co.jp/wp-content/uploads/2020/05/ec_200507_01_h-1310x874.jpg', 
+//             'imageAspectRatio' => 'rectangle', 
+//             'imageSize' => 'cover',          
+//             'imageBackgroundColor' => '#FFFFFF',          
+//             'text' => '現在状況を教えて下さい。', 
+//             'defaultAction' => [
+//                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+//             ] ,
+//             'actions' => [
+//                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+//                 [ 'type' => 'message', 'label' => '怪我がありますが、対応できます', 'text' => '回答1:2' ], 
+//                 [ 'type' => 'message', 'label' => 'レスキューが必要です', 'text' => '回答1:3' ], 
+//             ] 
+//         ]
+//  ];
+//  endMsg = 1;
+// }
 
 
-if ($message->{"text"} == '回答1:1' || $message->{"text"} == '回答1:2' ||  $message->{"text"} == '回答1:3'){
+// if ($message->{"text"} == '回答1:1' || $message->{"text"} == '回答1:2' ||  $message->{"text"} == '回答1:3'){
 
-    $messageData = [ 
-        'type' => 'template', 
-        'altText' => '住所確認', 
-        'template' => [ 'type' => 'buttons', 
-            'thumbnailImageUrl' => 'https://liginc.co.jp/wp-content/uploads/2020/05/ec_200507_01_h-1310x874.jpg', 
-            'imageAspectRatio' => 'rectangle', 
-            'imageSize' => 'cover',          
-            'imageBackgroundColor' => '#FFFFFF',          
-            'text' => '現在いる場所を教えて下さい。', 
-            'defaultAction' => [
-                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
-            ] ,
-            'actions' => [
-                [ 'type' => 'uri', 'label' => '地図より選択', 'uri' => 'https://line.me/R/nv/location/' ],
-                [ 'type' => 'message', 'label' => '位置を入力', 'text' => '位置入力' ], 
-            ] 
-        ]
- ];
- endMsg = 1;
-}
+//     $messageData = [ 
+//         'type' => 'template', 
+//         'altText' => '住所確認', 
+//         'template' => [ 'type' => 'buttons', 
+//             'thumbnailImageUrl' => 'https://liginc.co.jp/wp-content/uploads/2020/05/ec_200507_01_h-1310x874.jpg', 
+//             'imageAspectRatio' => 'rectangle', 
+//             'imageSize' => 'cover',          
+//             'imageBackgroundColor' => '#FFFFFF',          
+//             'text' => '現在いる場所を教えて下さい。', 
+//             'defaultAction' => [
+//                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+//             ] ,
+//             'actions' => [
+//                 [ 'type' => 'uri', 'label' => '地図より選択', 'uri' => 'https://line.me/R/nv/location/' ],
+//                 [ 'type' => 'message', 'label' => '位置を入力', 'text' => '位置入力' ], 
+//             ] 
+//         ]
+//  ];
+//  endMsg = 1;
+// }
 
  // 送られてきたメッセージの中身からレスポンスのタイプを選択 
 if ($message->{"text"} == '確認') {

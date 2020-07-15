@@ -21,7 +21,7 @@ if ($message->{"text"} == '安否確認'){
             'text' => '現在状況を教えて下さい。', 
             'defaultAction' => [
                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
-            ] 
+            ] ,
             'actions' => [
                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
                 [ 'type' => 'message', 'label' => '怪我がありますが、対応できます', 'text' => '回答1:2' ], 
@@ -44,6 +44,9 @@ if ($message->{"text"} == '回答1:1' || $message->{"text"} == '回答1:2' ||  $
             'imageSize' => 'cover',          
             'imageBackgroundColor' => '#FFFFFF',          
             'text' => '現在いる場所を教えて下さい。', 
+            'defaultAction' => [
+                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+            ] ,
             'actions' => [
                 [ 'type' => 'uri', 'label' => '地図より選択', 'uri' => 'https://line.me/R/nv/location/' ],
                 [ 'type' => 'message', 'label' => '位置を入力', 'text' => '位置入力' ], 

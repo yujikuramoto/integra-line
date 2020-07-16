@@ -125,26 +125,26 @@ if($message->{"text"}=="回答2:避難所"){
 
  }
 
-//地図
- if(mb_substr($message->{"text"}, 0,2)=="日本"){
-    // ボタンタイプ 
-    $messageData = [ 
-        'type' => 'template',
-         'altText' => 'ボタン', 
-        'template' => [
-             'type' => 'buttons',
-             'title' => '緊急支援装具の提供',
-             'text' => '位置情報の送信有難うございました。緊急支援装具は必要ですか？緊急支援装具は、サイズや種類が普段ご使用のものと異なります。使用方法などが異なりますので、承諾頂ける方のみご利用下さい。', 
-            'actions' => [
-                [ 'type' => 'message', 'label' => '承諾し、受取り希望', 'text' => '回答4:希望' ],
-                [ 'type' => 'message', 'label' => '不要', 'text' => '回答4:不要' ],
-              ]
-          ] 
-     ];
+// //地図
+//  if(mb_substr($message->{"text"}, 0,2)=="日本"){
+//     // ボタンタイプ 
+//     $messageData = [ 
+//         'type' => 'template',
+//          'altText' => 'ボタン', 
+//         'template' => [
+//              'type' => 'buttons',
+//              'title' => '緊急支援装具の提供',
+//              'text' => '位置情報の送信有難うございました。緊急支援装具は必要ですか？緊急支援装具は、サイズや種類が普段ご使用のものと異なります。使用方法などが異なりますので、承諾頂ける方のみご利用下さい。', 
+//             'actions' => [
+//                 [ 'type' => 'message', 'label' => '承諾し、受取り希望', 'text' => '回答4:希望' ],
+//                 [ 'type' => 'message', 'label' => '不要', 'text' => '回答4:不要' ],
+//               ]
+//           ] 
+//      ];
 
-     $endMsg=1;
+//      $endMsg=1;
 
- }
+//  }
 
 
  // 送られてきたメッセージの中身からレスポンスのタイプを選択 
@@ -231,7 +231,7 @@ if ($message->{"text"} == '確認') {
     if($endMsg==0){
 
      // それ以外は送られてきたテキストをオウム返し
-     $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 
+     $messageData = [ 'type' => 'text', 'text' => $contentType ]; 
 
     }
 

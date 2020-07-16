@@ -56,6 +56,9 @@ $endMsg = 0;
 //  endMsg = 1;
 // }
 
+$kaitoNo =  $message->{"text"};
+$kaitoNo = substr($kaitoNo, 0, 5);
+
 if ($message->{"text"} == '安否確認') { 
     // ボタンタイプ 
     $messageData = [ 
@@ -76,7 +79,7 @@ if ($message->{"text"} == '安否確認') {
      $endMsg=1;
  }
 
- if($message->{"text"}=="回答1:1"){
+ if($kaitoNo=="回答1"){
 
     // ボタンタイプ 
     $messageData = [ 
@@ -88,7 +91,55 @@ if ($message->{"text"} == '安否確認') {
              'text' => '現在の住所を教えて下さい', 
             'actions' => [
                 [ 'type' => 'uri', 'label' => '地図から選択', 'uri' => 'https://line.me/R/nv/location/' ],
-                [ 'type' => 'message', 'label' => '住所を入力', 'text' => '回答2：住所' ],
+                [ 'type' => 'message', 'label' => '避難所から選択', 'text' => '回答2:避難所' ],
+                [ 'type' => 'message', 'label' => '住所を入力', 'text' => '回答2:住所' ],
+              ]
+          ] 
+     ];
+
+     $endMsg=1;
+
+ }
+
+ if($message->{"text"}=="回答2:避難所"){
+
+    // ボタンタイプ 
+    $messageData = [ 
+        'type' => 'template',
+         'altText' => 'ボタン', 
+        'template' => [
+             'type' => 'buttons',
+             'title' => '現在位置',
+             'text' => '現在の住所を教えて下さい', 
+            'actions' => [
+                [ 'type' => 'message', 'label' => '広域避難場所', 'text' => '回答3:広域' ],
+                [ 'type' => 'message', 'label' => '中央区', 'text' => '回答3:中央区' ],
+                [ 'type' => 'message', 'label' => '東区', 'text' => '回答3:東区' ],
+                [ 'type' => 'message', 'label' => '西区', 'text' => '回答3:西区' ],
+                [ 'type' => 'message', 'label' => '南区', 'text' => '回答3:南区' ],
+                [ 'type' => 'message', 'label' => '北区', 'text' => '回答3:北区' ],
+                [ 'type' => 'message', 'label' => '戻る', 'text' => '回答1:1' ],
+              ]
+          ] 
+     ];
+
+     $endMsg=1;
+
+ }
+
+//地図
+ if($message->{"type"} == 'location'){
+    // ボタンタイプ 
+    $messageData = [ 
+        'type' => 'template',
+         'altText' => 'ボタン', 
+        'template' => [
+             'type' => 'buttons',
+             'title' => '緊急支援装具の提供',
+             'text' => '位置情報の送信有難うございました。\n緊急支援装具は必要ですか？\n緊急支援装具は、サイズや種類が普段ご使用のものと異なります。\n使用方法などが異なりますので、承諾頂ける方のみご利用下さい。', 
+            'actions' => [
+                [ 'type' => 'message', 'label' => '承諾し、受取り希望', 'text' => '回答4:希望' ],
+                [ 'type' => 'message', 'label' => '不要', 'text' => '回答4:不要' ],
               ]
           ] 
      ];

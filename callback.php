@@ -57,7 +57,7 @@ $endMsg = 0;
 // }
 
 $kaitoNo =  $message->{"text"};
-$kaitoNo = substr($kaitoNo, 0, 5);
+$kaitoNo = mb_substr($kaitoNo, 0, 3);
 
 if ($message->{"text"} == '安否確認') { 
     // ボタンタイプ 
@@ -69,10 +69,9 @@ if ($message->{"text"} == '安否確認') {
              'title' => '安否確認v2',
              'text' => '現在状況を教えて下さい。', 
             'actions' => [
-                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答１:1' ],
                 [ 'type' => 'message', 'label' => '怪我がありますが、対応できます。', 'text' => '回答1:2' ],
-                [ 'type' => 'message', 'label' => 'レスキューが必要です。', 'text' => '回答1:3' ],
-                [ 'type' => 'message', 'label' =>  $kaitoNo, 'text' => '回答1:3' ],
+                [ 'type' => 'message', 'label' => 'レスキューが必要です。'.$kaitoNo, 'text' => '回答1:3' ],
               ]
           ] 
      ];
@@ -80,7 +79,7 @@ if ($message->{"text"} == '安否確認') {
      $endMsg=1;
  }
 
- if($kaitoNo=="回答1"){
+ if($kaitoNo=="回答１"){
 
     // ボタンタイプ 
     $messageData = [ 

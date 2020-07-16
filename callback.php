@@ -73,7 +73,7 @@ if ($message->{"text"} == '安否確認') {
           ] 
      ];
 
-     endMsg=1;
+     $endMsg=1;
  }
 
  // if(mb_substr($message->{"text"} , 0, 3)=="回答1"){
@@ -179,7 +179,7 @@ if ($message->{"text"} == '確認') {
     ];
  } else {
 
-    if(endMsg==0){
+    if($endMsg==0){
 
      // それ以外は送られてきたテキストをオウム返し
      $messageData = [ 'type' => 'text', 'text' => $message->{"text"} ]; 

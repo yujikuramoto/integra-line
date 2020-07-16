@@ -101,24 +101,21 @@ if ($message->{"text"} == '安否確認') {
 
  }
 
- if($message->{"text"}=="回答2:避難所"){
+if($message->{"text"}=="回答2:避難所"){
 
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',
-         'altText' => 'ボタン', 
+        'altText' => 'ボタン', 
         'template' => [
              'type' => 'buttons',
-             'title' => '現在位置',
-             'text' => '現在の住所を教えて下さい', 
+             'title' => '避難所',
+             'text' => '区域を選択してください', 
             'actions' => [
-                [ 'type' => 'message', 'label' => '広域避難場所', 'text' => '回答3:広域' ],
                 [ 'type' => 'message', 'label' => '中央区', 'text' => '回答3:中央区' ],
                 [ 'type' => 'message', 'label' => '東区', 'text' => '回答3:東区' ],
                 [ 'type' => 'message', 'label' => '西区', 'text' => '回答3:西区' ],
                 [ 'type' => 'message', 'label' => '南区', 'text' => '回答3:南区' ],
-                [ 'type' => 'message', 'label' => '北区', 'text' => '回答3:北区' ],
-                [ 'type' => 'message', 'label' => '戻る', 'text' => '回答1:1' ],
               ]
           ] 
      ];

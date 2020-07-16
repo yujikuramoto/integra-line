@@ -71,7 +71,7 @@ if ($message->{"text"} == '安否確認') {
             'actions' => [
                 [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答１:1' ],
                 [ 'type' => 'message', 'label' => '怪我がありますが、対応できます。', 'text' => '回答1:2' ],
-                [ 'type' => 'message', 'label' => 'レスキューが必要です。'.$kaitoNo, 'text' => '回答1:3' ],
+                [ 'type' => 'message', 'label' => 'レスキューが必要です。', 'text' => '回答1:3' ],
               ]
           ] 
      ];

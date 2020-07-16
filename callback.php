@@ -69,6 +69,22 @@ if ($message->{"text"} == '確認') {
             ] 
         ]
  ]; 
+} elseif ($message->{"text"} == '安否確認') { 
+    // ボタンタイプ 
+    $messageData = [ 
+        'type' => 'template',
+         'altText' => 'ボタン', 
+        'template' => [
+             'type' => 'buttons',
+             'title' => '安否確認',
+             'text' => '現在状況を教えて下さい。', 
+            'actions' => [
+                [ 'type' => 'message', 'label' => '怪我はありません。', 'text' => '回答1:1' ],
+                [ 'type' => 'message', 'label' => '怪我がありますが、対応できます。', 'text' => '回答1:2' ],
+                [ 'type' => 'message', 'label' => 'レスキューが必要です。', 'text' => '回答1:3' ],
+              ]
+          ] 
+     ];
 } elseif ($message->{"text"} == 'ボタン') { 
     // ボタンタイプ 
     $messageData = [ 
@@ -91,7 +107,7 @@ if ($message->{"text"} == '確認') {
                  ]
               ]
           ] 
-     ]; 
+     ];
 } elseif ($message->{"text"} == 'ca') {
      // カルーセルタイプ 
     $messageData = [ 

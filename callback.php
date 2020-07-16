@@ -76,7 +76,7 @@ if ($message->{"text"} == '安否確認') {
      $endMsg=1;
  }
 
- if(mb_substr($message->{"text"} , 0, 3)=="回答1"){
+ if($message->{"text"}=="回答1:1"){
 
     // ボタンタイプ 
     $messageData = [ 
@@ -88,7 +88,7 @@ if ($message->{"text"} == '安否確認') {
              'text' => '現在の住所を教えて下さい', 
             'actions' => [
                 [ 'type' => 'uri', 'label' => '地図から選択', 'uri' => 'https://line.me/R/nv/location/' ],
-                [ 'type' => 'message', 'label' => '住所を入植', 'text' => '回答2：住所' ],
+                [ 'type' => 'message', 'label' => '住所を入力', 'text' => '回答2：住所' ],
               ]
           ] 
      ];

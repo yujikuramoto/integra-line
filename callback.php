@@ -5,6 +5,7 @@ $jsonObj = json_decode($jsonString);
 $message = $jsonObj->{"events"}[0]->{"message"}; 
 $userID = $jsonObj->{"events"}[0]->{"source"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+$contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
 
 $endMsg = 0;
 
@@ -125,7 +126,7 @@ if($message->{"text"}=="回答2:避難所"){
  }
 
 //地図
- if($message->{"type"} == 'location'){
+ if($contentType==7){
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',

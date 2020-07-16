@@ -56,20 +56,7 @@ $endMsg = 0;
 //  endMsg = 1;
 // }
 
- // 送られてきたメッセージの中身からレスポンスのタイプを選択 
-if ($message->{"text"} == '確認') {
-     // 確認ダイアログタイプ 
-    $messageData = [ 
-        'type' => 'template', 
-        'altText' => '確認ダイアログ', 
-        'template' => [ 'type' => 'confirm', 'text' => '元気ですかー？', 
-            'actions' => [
-                [ 'type' => 'message', 'label' => '元気です', 'text' => '元気です' ],
-                [ 'type' => 'message', 'label' => 'まあまあです', 'text' => 'まあまあです' ], 
-            ] 
-        ]
- ]; 
-} elseif ($message->{"text"} == '安否確認') { 
+if ($message->{"text"} == '安否確認') { 
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',
@@ -85,6 +72,45 @@ if ($message->{"text"} == '確認') {
               ]
           ] 
      ];
+
+     endMsg=1;
+ }
+
+ if(mb_substr($message->{"text"} , 0, 3)=="回答1"){
+
+    // ボタンタイプ 
+    $messageData = [ 
+        'type' => 'template',
+         'altText' => 'ボタン', 
+        'template' => [
+             'type' => 'buttons',
+             'title' => '現在位置',
+             'text' => '現在の住所を教えて下さい', 
+            'actions' => [
+                [ 'type' => 'uri', 'label' => '地図から選択', 'uri' => 'https://line.me/R/nv/location/' ],
+                [ 'type' => 'message', 'label' => '住所を入植', 'text' => '回答2：住所' ],
+              ]
+          ] 
+     ];
+
+     endMsg=1;
+
+ }
+
+
+ // 送られてきたメッセージの中身からレスポンスのタイプを選択 
+if ($message->{"text"} == '確認') {
+     // 確認ダイアログタイプ 
+    $messageData = [ 
+        'type' => 'template', 
+        'altText' => '確認ダイアログ', 
+        'template' => [ 'type' => 'confirm', 'text' => '元気ですかー？', 
+            'actions' => [
+                [ 'type' => 'message', 'label' => '元気です', 'text' => '元気です' ],
+                [ 'type' => 'message', 'label' => 'まあまあです', 'text' => 'まあまあです' ], 
+            ] 
+        ]
+ ]; 
 } elseif ($message->{"text"} == 'ボタン') { 
     // ボタンタイプ 
     $messageData = [ 

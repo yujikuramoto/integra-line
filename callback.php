@@ -126,7 +126,7 @@ if($message->{"text"}=="回答2:避難所"){
  }
 
 //地図
- if($contentType==7){
+ if(mb_substr(($message->{"text"}, 0.2)=="日本"){
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',

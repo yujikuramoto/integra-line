@@ -11,18 +11,18 @@ $accessToken = 'g+1NNYuFz0EDbgfBIP13UCjol3b04Rs793Q5GQ8Us8Fqpt5lFJJ23dtKkoQMysx+
     $setData = [
 
         'size' => [
-          'width' => '2500',
-          'height' => '1686'
+          'width' => 2500,
+          'height' => 1686
         ],
         'selected' => 'false',
         'name' => 'Nice richmenu',
         'chatBarText' => 'Tap here',
         'areas' => [
           'bounds' => [
-            'x' => '34',
-            'y' => '24',
-            'width' => '169',
-            'height' => '193'
+            'x' => 0,
+            'y' => 0,
+            'width' => 2500,
+            'height' => 1686
           ],
           'action' => [
             'type' => 'uri',

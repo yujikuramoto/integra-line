@@ -1,11 +1,11 @@
 <?php 
 $accessToken = 'g+1NNYuFz0EDbgfBIP13UCjol3b04Rs793Q5GQ8Us8Fqpt5lFJJ23dtKkoQMysx+PVpnev2rkZ6g94tMNa5ZvUixtnd3NbEh0mY/3W1ztUr7ILa7G4NX/iFC+ovgjohW9QsJZIG6TcgkI8a43GMQ3wdB04t89/1O/w1cDnyilFU='; 
-$jsonString = file_get_contents('php://input'); error_log($jsonString); 
-$jsonObj = json_decode($jsonString);
-$message = $jsonObj->{"events"}[0]->{"message"}; 
-$userID = $jsonObj->{"events"}[0]->{"source"};
-$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
-$contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
+//$jsonString = file_get_contents('php://input'); error_log($jsonString); 
+//$jsonObj = json_decode($jsonString);
+//$message = $jsonObj->{"events"}[0]->{"message"}; 
+//$userID = $jsonObj->{"events"}[0]->{"source"};
+//$replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
+//$contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
 
      // カルーセルタイプ 
     $setData = [

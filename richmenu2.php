@@ -48,3 +48,5 @@
     $result =  curl_exec($ch);
     $result = mb_convert_encoding($result,"UTF-8","EUC-JP");
     curl_close($ch); //終了
+    
+    echo $result;

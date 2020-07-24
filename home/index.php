@@ -3,7 +3,8 @@
 
 <?php
 
-    echo "<H1>ID:$_SESSION["userID"]</H1>"
+    $userID=$_SESSION["userID"];
+    echo "<H1>ID:$userID</H1>"
 
 ?>
 <input type='text' id='result' size='40' ></input>

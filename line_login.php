@@ -1,6 +1,6 @@
 <?php
 
-$callback_url = "https://integra-line.herokuapp.com/line-callback.php";
+$callback_url = "https://integra-line.herokuapp.com/line_callback.php";
 
 $url = sprintf(
     "https://access.line.me/dialog/oauth/weblogin"

@@ -1,0 +1,2 @@
+define("LINE_CLIENT_ID", "1654489742");
+define("LINE_CLIENT_SECRET", "2e8ca695b0fcb0662f497a328c87cdfe");

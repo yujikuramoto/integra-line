@@ -19,6 +19,10 @@ $query .= "state=" . urlencode($_SESSION['_line_state']) . "&";
 $query .= "scope=" . urlencode("openid") . "&";
 
 $url = $base_url . '?' . $query;
+
+
+header("Location: $url") ;
+
 ?>
 <!DOCTYPE html>
 <html>

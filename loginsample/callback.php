@@ -11,8 +11,8 @@ echo '$code= ' . $code . '<br /><br />';
 $state = $_GET['state'];
 echo '$state= ' . $state . '<br /><br />';
 
-//$session_state = $_SESSION['_line_state'];
-$session_state='0963825815';
+$session_state = $_SESSION['_line_state'];
+//$session_state='0963825815';
 unset($_SESSION['_line_state']);
 if ($session_state !== $state) {
     echo 'アクセスエラー';

@@ -105,16 +105,3 @@ print("[sub]:[" . $data->sub . "][対象ユーザーの識別子]<br />\n");
 
 
 
-$accessToken = 'g+1NNYuFz0EDbgfBIP13UCjol3b04Rs793Q5GQ8Us8Fqpt5lFJJ23dtKkoQMysx+PVpnev2rkZ6g94tMNa5ZvUixtnd3NbEh0mY/3W1ztUr7ILa7G4NX/iFC+ovgjohW9QsJZIG6TcgkI8a43GMQ3wdB04t89/1O/w1cDnyilFU='; 
-
-$ch = curl_init('https://api.line.me/v2/profile'); 
-//curl_setopt($ch, CURLOPT_POST, true); 
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET'); 
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); 
-//curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($setData)); 
-curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json; charser=UTF-8', 'Authorization: Bearer ' . $accessToken )); 
-$result = curl_exec($ch); error_log($result); 
-curl_close($ch);
-
-print($result);
-

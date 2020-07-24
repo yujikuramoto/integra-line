@@ -3,7 +3,7 @@
 
 <?php
 
-    $userID=$_SESSION["userID"];
+    $userID=$_GET['uID'];
     echo "<H1>ID:$userID</H1>"
 
 ?>

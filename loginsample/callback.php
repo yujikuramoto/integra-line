@@ -104,9 +104,7 @@ echo '<br /><br />';
 print("[sub]:[" . $data->sub . "][対象ユーザーの識別子]<br />\n");
 
 
-$_SESSION["userID"]=$data->sub;
-
-header("Location: ../home/index.php") ;
+header("Location: ../home/index.php?uID=" . $data->sub) ;
 
 
 

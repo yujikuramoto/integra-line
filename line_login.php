@@ -7,7 +7,7 @@ $url = sprintf(
     ."?response_type=code"
     ."&client_id=%s"
     ."&redirect_uri=%s"
-    ,LINE_CLIENT_ID
+    ,"1654489742"
     ,$callback_url
 );
 

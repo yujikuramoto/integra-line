@@ -10,10 +10,10 @@ $url = "https://api.line.me/v1/oauth/accessToken";
 
 $data = array(
     "grant_type" => "authorization_code",
-    "client_id" => LINE_CLIENT_ID,
-    "client_secret" => LINE_CLIENT_SECRET,
+    "client_id" => "1654489742",
+    "client_secret" => "2e8ca695b0fcb0662f497a328c87cdfe",
     "code" => $_GET["code"],
-    "redirect_uri" => "",
+    "redirect_uri" => "https://integra-line.herokuapp.com/line_callback.php",
 );
 
 $ch = curl_init();

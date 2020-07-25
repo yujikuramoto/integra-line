@@ -21,7 +21,7 @@ $query .= "scope=" . urlencode("openid") . "&";
 $url = $base_url . '?' . $query;
 
 
-//header("Location: $url") ;
+header("Location: $url") ;
 
 ?>
 <!DOCTYPE html>

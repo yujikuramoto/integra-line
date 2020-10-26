@@ -1,13 +1,11 @@
-<html>
-<body>
+
 
 <?php
 
     $userID=$_GET['uID'];
-    echo "<H1>ID:$userID</H1>";
-    echo "<a href='qr.php?uid=$userID'>qr読取</a>";
-?>
+    // リダイレクト先のURLへ転送する
+    $url = 'https://ostomate.site/regist/regist?uid=' . $_GET['uID'];
+    header('Location: ' . $url, true, 301);
 
-
-
-</body></html>
+    // すべての出力を終了
+    exit;

@@ -10,6 +10,6 @@ curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/v2/bot/user/' . $userID . '/r
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 //curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-//$message = curl_exec($ch);
+curl_exec($ch);
 curl_close($ch);
 //echo $message;

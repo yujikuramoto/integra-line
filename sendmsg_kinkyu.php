@@ -21,7 +21,7 @@ $text = [
   // ],
 
 
-
+[
     'type'     => 'template',
     'altText'  => '安否確認をお願いします。',
     'template' => [
@@ -35,7 +35,7 @@ $text = [
     ]
 
 
-
+],
 
 ];
 

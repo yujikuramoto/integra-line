@@ -12,4 +12,4 @@ curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_exec($ch);
 curl_close($ch);
-//echo $message;
+echo 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-fa8b3098550d86ec8d7492b8fc5031a3';

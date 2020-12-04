@@ -6,7 +6,7 @@ $userID=$_GET['uID'];
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $accessToken, 'Content-Type: application/json'));
-curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/fa8b3098550d86ec8d7492b8fc5031a3');
+curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-fa8b3098550d86ec8d7492b8fc5031a3');
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 //curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

@@ -21,7 +21,7 @@ $text = [
   // ],
 
 
-[
+
     'type'     => 'template',
     'altText'  => '安否確認をお願いします。',
     'template' => [
@@ -35,15 +35,15 @@ $text = [
     ]
 
 
-],
+
 
 ];
 
 $message = [
     'to' => $userID,
     'messages' => $text,
-    'client_id'     => $client_id,
-    'client_secret' => $client_secret
+    //'client_id'     => $client_id,
+    //'client_secret' => $client_secret
 ];
 
 $message = json_encode($message);

@@ -4,13 +4,31 @@ $accessToken = 'g+1NNYuFz0EDbgfBIP13UCjol3b04Rs793Q5GQ8Us8Fqpt5lFJJ23dtKkoQMysx+
 $userID=$_GET['uID'];
 
 
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Bearer ' . $accessToken, 'Content-Type: application/json'));
-curl_setopt($ch, CURLOPT_URL, 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-fa8b3098550d86ec8d7492b8fc5031a3');
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-//curl_setopt($ch, CURLOPT_POSTFIELDS, $message);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$a = curl_exec($ch);
-curl_close($ch);
-echo 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-fa8b3098550d86ec8d7492b8fc5031a3';
-echo $a;
+$headers = [
+    'Content-Type: application/json',
+    'Authorization: Bearer '.$accessToken,
+];
+
+// ボディーを設定
+$body = json_encode([
+            'replyToken' => $replyToken,
+            'messages'   => [
+                $message,
+            ]
+        ]);
+
+// CURLオプションを設定
+$options = [
+    CURLOPT_URL            => 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-fa8b3098550d86ec8d7492b8fc5031a3',
+    CURLOPT_CUSTOMREQUEST  => 'POST',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_HTTPHEADER     => $headers,
+    CURLOPT_POSTFIELDS     => $body,
+];
+
+// 返信
+$curl = curl_init();
+curl_setopt_array($curl, $options);
+curl_exec($curl);
+curl_close($curl);
+

@@ -10,12 +10,12 @@ $headers = [
 ];
 
 // ボディーを設定
-$body = json_encode([
-            'replyToken' => $replyToken,
-            'messages'   => [
-                $message,
-            ]
-        ]);
+//$body = json_encode([
+//            'replyToken' => $replyToken,
+//            'messages'   => [
+//                $message,
+//            ]
+//        ]);
 
 // CURLオプションを設定
 $options = [
@@ -23,7 +23,7 @@ $options = [
     CURLOPT_CUSTOMREQUEST  => 'POST',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER     => $headers,
-    CURLOPT_POSTFIELDS     => $body,
+//    CURLOPT_POSTFIELDS     => $body,
 ];
 
 // 返信

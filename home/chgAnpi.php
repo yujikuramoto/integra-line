@@ -22,7 +22,7 @@ $options = [
     CURLOPT_URL            => 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-6d495f0eb0be13564825567d5caa6956',
     CURLOPT_CUSTOMREQUEST  => 'POST',
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_HTTPHEADER     => $headers,
+    CURLOPT_HTTPHEADER     => $headers
 //    CURLOPT_POSTFIELDS     => $body,
 ];
 

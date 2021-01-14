@@ -10,7 +10,7 @@ if (!session_id()) {
 try {
 	$goto=$_GET['goto'];
 } catch ( Exception $ex ) {
-	$goto'';
+	$goto='';
 }
 
 

@@ -5,9 +5,17 @@ if (!session_id()) {
     session_start();
 }
 
+
+try {
+	$goto='?goto=' . $_GET['goto'];
+} catch ( Exception $ex ) {
+	$goto='';
+}
+
+
 $base_url = "https://access.line.me/oauth2/v2.1/authorize";
 $client_id = CLIENT_ID;
-$redirect_uri = REDIRECT_URI;
+$redirect_uri = REDIRECT_URI . $goto;
 
 $_SESSION['_line_state'] = sha1(time());
 

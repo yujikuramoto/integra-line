@@ -7,7 +7,15 @@ if (!session_id()) {
 
 
 try {
-	$goto='?goto=' . $_GET['goto'];
+
+	if ($_GET['goto']=='anpi'){
+
+		$goto="?goto=anpi";
+	}else{
+		$goto="";
+	}
+
+
 } catch ( Exception $ex ) {
 	$goto='';
 }

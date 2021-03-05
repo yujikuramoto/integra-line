@@ -23,7 +23,7 @@ try {
 
 $base_url = "https://access.line.me/oauth2/v2.1/authorize";
 $client_id = CLIENT_ID;
-$redirect_uri = REDIRECT_URI . $goto;
+$redirect_uri = REDIRECT_URI;
 
 $_SESSION['_line_state'] = sha1(time());
 

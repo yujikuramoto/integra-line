@@ -5,15 +5,6 @@ if (!session_id()) {
     session_start();
 }
 
-
-
-try {
-	$goto=$_GET['goto'];
-} catch ( Exception $ex ) {
-	$goto='';
-}
-
-
 $code = $_GET['code'];
 echo '$code= ' . $code . '<br /><br />';
 
@@ -113,13 +104,7 @@ echo '<br /><br />';
 print("[sub]:[" . $data->sub . "][対象ユーザーの識別子]<br />\n");
 
 
-if ($goto=='anpi')
-{
-	header("Location: ../home/index.php?goto=anpi&uID=" . $data->sub) ;
-}else{
-	header("Location: ../home/index.php?uID=" . $data->sub) ;
-}
-
+header("Location: ../home/redirect_anpi.php?uID=" . $data->sub) ;
 
 
 

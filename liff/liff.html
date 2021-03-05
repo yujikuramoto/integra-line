@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<select name="" id="message_mode">
+	<option value="1">テキスト</option>
+	<option value="2">画像</option>
+	<option value="3">動画</option>
+	<option value="4">音声</option>
+	<option value="5">位置情報</option>
+	<option value="6">ボタン</option>
+	<option value="7">確認</option>
+	<option value="8">カルーセル</option>
+	<option value="9">Flex</option>
+</select>
+<input type="text" value="テスト" id="message">
+<button id="send_message">メッセージ送信</button>
+<button id="open_window">アプリ内ブラウザで開く</button>
+<button id="open_window_external">デフォルトブラウザで開く</button>
+<button id="get_profile">プロフィール取得</button>
+<button id="close_window">LIFTアプリ閉じる</button>
+<button id="ajax_internal">ajax(内部)</button>
+<button id="ajax_external">ajax(外部)</button>
+<a href="/under">aタグの内部リンク</a>
+<a href="https://pfq.jp">aタグの外部リンク</a>
+<a href="https://pfq.jp" target="_blank">aタグの外部リンク(別タブ)</a>
+<a href="http://line.me/R/msg/text/?https://lift.pfq.jp/?p=send">LINEでおくる</a>
+
+<form action="https://dev5.pfq.jp/liff/liff.php" method="post">
+	<input type="hidden" value="abcdefg" name="p">
+	<input type="submit" value="secondary domain">
+</form>
+
+<form action="https://play-te.com/" method="post">
+	<input type="hidden" value="abcdefg" name="p">
+	<input type="submit" value="other domain">
+</form>
+
+<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="jquery-2.2.3.min.js"></script>
+<script src="liff.js"></script>
+<style>
+*{
+width: 94%;
+float: left;
+margin: 3%;
+}
+</style>
+
+</body>
+</html>

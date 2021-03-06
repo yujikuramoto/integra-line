@@ -21,7 +21,7 @@ $(function(){
 		outputLog(JSON.stringify(p));
 
 		//window.location.href("https://ostomate.site/regist/regist?uid=" + _iUserId)
-		liff.openWindow({url:"https://ostomate.site/regist/regist?uid=" + _iUserId,external:false});
+		
 	}
 	
 	/**
@@ -38,7 +38,7 @@ $(function(){
 	 * アプリ内ブラウザで開く
 	 */
 	function openWindow(e){
-		liff.openWindow({url:"https://pfq.jp",external:false});
+		liff.openWindow({url:"https://ostomate.site/regist/regist?uid=" + _iUserId,external:false});
 		//自分のドメインの時はexternal:false(lifの中で次画面遷移
 		//trueにすると、別タブ（デフォルトのブラウザでひらく）
 //		liff.openWindow({url:"http://line.me/R/msg/text/?https://liff.pfq.jp/",external:false});

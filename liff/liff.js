@@ -1,6 +1,7 @@
 var $txt = $("textarea");
 var _iUserId = "";
 var _oProfile = [];
+
 	
 $(function(){
 	if("liff" in window){
@@ -18,6 +19,9 @@ $(function(){
 		//alert(location.href);
 		//outputLog("successInit : user_id = "+p.context.userId);
 		outputLog(JSON.stringify(p));
+
+		window.location.href("https://ostomate.site/regist/regist?uid=" + _iUserId)
+
 	}
 	
 	/**

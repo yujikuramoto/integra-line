@@ -20,8 +20,8 @@ $(function(){
 		//outputLog("successInit : user_id = "+p.context.userId);
 		outputLog(JSON.stringify(p));
 
-		window.location.href("https://ostomate.site/regist/regist?uid=" + _iUserId)
-
+		//window.location.href("https://ostomate.site/regist/regist?uid=" + _iUserId)
+		liff.openWindow({url:"https://ostomate.site/regist/regist?uid=" + _iUserId,external:false});
 	}
 	
 	/**

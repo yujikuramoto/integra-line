@@ -1,8 +1,8 @@
 <?php
-$accessToken = 'g+1NNYuFz0EDbgfBIP13UCjol3b04Rs793Q5GQ8Us8Fqpt5lFJJ23dtKkoQMysx+PVpnev2rkZ6g94tMNa5ZvUixtnd3NbEh0mY/3W1ztUr7ILa7G4NX/iFC+ovgjohW9QsJZIG6TcgkI8a43GMQ3wdB04t89/1O/w1cDnyilFU='; 
+$accessToken = '81e9BiSD6pC3Zj7zC5GCWocLr11Yv9UY3xuyxSGVE3rbUIiJ6ITfWGIUxMkykC32me25NPiXffrxuTmUHkt0lO9kf6qvjL1CRUBZcn/UkEW3SIBXCgZFaQiZDO4Iik8DbpqlC/7VoVXvc/o2Pqa/lgdB04t89/1O/w1cDnyilFU=';
 
 $userID=$_GET['uID'];
-$text = [
+/* $text = [
   // [
   //   'type' => 'template',
   //   'altText' => '安否確認をお願いします。',
@@ -44,8 +44,21 @@ $message = [
     'messages' => $text,
     //'client_id'     => $client_id,
     //'client_secret' => $client_secret
+]; */
+
+$text = [
+    [
+    'type' => 'text',
+    'text' => '災害地域に指定されました。安否確認を行ってください。'
+    ],
 ];
 
+$message = [
+    'to' => $userID,
+    'messages' => $text,
+    'client_id'     => $client_id,
+    'client_secret' => $client_secret
+];
 $message = json_encode($message);
 
 $ch = curl_init();

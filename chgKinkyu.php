@@ -19,7 +19,7 @@ $body = json_encode([
 
 // CURLオプションを設定
 $options = [
-    CURLOPT_URL            => 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-5e40300db0569429c6ef45493653ea91',
+    CURLOPT_URL            => 'https://api.line.me/v2/bot/user/' . $userID . '/richmenu/richmenu-afdbcdcf615477291011dc4c252f3de9',
     CURLOPT_CUSTOMREQUEST  => 'POST',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_HTTPHEADER     => $headers,

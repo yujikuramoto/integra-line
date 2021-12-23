@@ -61,7 +61,29 @@ $test = "test";
 // $kaitoNo =  $message->{"text"};
 // $kaitoNo = mb_substr($kaitoNo, 0, 3);
 
+
 if ($message->{"text"} == '安否確認') { 
+    // ボタンタイプ 
+    $messageData = [ 
+        'type' => 'template',
+         'altText' => 'ボタン', 
+        'template' => [
+             'type' => 'buttons',
+             'title' => '安否確認にご協力ください。',
+             'text' => '現在避難場所を教えて下さい。', 
+            'actions' => [
+                [ 'type' => 'uri', 'label' => '自宅', 'uri' => 'https://ostomate.secure-server.jp/LoginAnpi.aspx?kbn=1&uid='.$uid  ],
+                [ 'type' => 'uri', 'label' => '避難所', 'uri' => 'https://ostomate.secure-server.jp/LoginAnpi.aspx?kbn=2&uid='.$uid  ],
+                [ 'type' => 'uri', 'label' => 'その他', 'uri' => 'https://ostomate.secure-server.jp/LoginAnpi.aspx?kbn=3&uid='.$uid  ],
+              ]
+          ] 
+     ];
+
+     $endMsg=1;
+ }
+
+
+if ($message->{"text"} == '安否確認old') { 
     // ボタンタイプ 
     $messageData = [ 
         'type' => 'template',

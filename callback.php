@@ -6,7 +6,7 @@ $message = $jsonObj->{"events"}[0]->{"message"};
 $userID = $jsonObj->{"events"}[0]->{"source"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 $contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
-$user_ID = $event->getUserId();
+$user_ID =  $jsonObj->{"events"}[0]->{"getUserId"};
 $endMsg = 0;
 
 // if ($message->{"text"} == '安否確認'){

@@ -6,7 +6,6 @@ $message = $jsonObj->{"events"}[0]->{"message"};
 $userID = $jsonObj->{"events"}[0]->{"source"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 $contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
-$user_ID =  $jsonObj->{"events"}[0]->{"getUserId"};
 $endMsg = 0;
 
 // if ($message->{"text"} == '安否確認'){
@@ -91,7 +90,7 @@ if ($message->{"text"} == '安否確認') {
              'title' => '現在位置',
              'text' => '現在の住所を教えて下さい', 
             'actions' => [
-                [ 'type' => 'uri', 'label' => '地図から選択', 'uri' => 'https://ostomate.secure-server.jp/LoginAnpi.aspx?uid='.$user_ID ],
+                [ 'type' => 'uri', 'label' => '地図から選択', 'uri' => 'https://ostomate.secure-server.jp/LoginAnpi.aspx?uid='.$userID->{"userID"} ],
                 [ 'type' => 'message', 'label' => '避難所から選択', 'text' => '回答2:避難所' ],
                 [ 'type' => 'message', 'label' => '住所を入力', 'text' => '回答2:住所' ],
               ]

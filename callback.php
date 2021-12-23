@@ -7,7 +7,7 @@ $userID = $jsonObj->{"events"}[0]->{"source"};
 $replyToken = $jsonObj->{"events"}[0]->{"replyToken"};
 $contentType = $jsonObj->{"result"}[0]->{"content"}->{"contentType"};
 $endMsg = 0;
-$uid = $userID->{"type"};
+$uid = $userID->{"userId"};
 $test = "test";
 
 // if ($message->{"text"} == '安否確認'){
